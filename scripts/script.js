@@ -105,6 +105,7 @@ function criadordecards(objeto) {
 
 
 function itenscarrinho(objeto) {
+    
     let carrinho = document.createElement("div");
     carrinho.classList.add("carrinho");
     
@@ -115,17 +116,44 @@ function itenscarrinho(objeto) {
     <p class = nome>${objeto.nome}</p>
     <p class = preco>${objeto.valor}TY </p>
     </div>
-    <div id=excluircarrinho><img id="imgc" src="imagens/lixeira.png" alt=""></div>
+    <button class=excluircarrinho id="${objeto.id}c">Exluir</button>
     `
     let divcarrinho = document.getElementById("divcarrinho")
 
-
-    divcarrinho.appendChild(carrinho)
+    
+        divcarrinho.appendChild(carrinho)
+    
+    
 
 }
 
+
 let content = document.getElementById("content")
 verificarvazio()
+
+direita.addEventListener("click", function (event) {
+    let result = event.target.id
+    
+    for (let i = 0; i<arraycarrinho.length; i++){
+      if(arraycarrinho[i].id+"c"===result){
+          arraycarrinho.splice(i, 1)
+      }  
+      
+
+    }
+    divcarrinho.innerHTML = ""
+    console.log(result)
+
+    for (let i = 0; i<arraycarrinho.length;i++){
+        itenscarrinho(arraycarrinho[i])
+    }
+    
+    
+    
+    return
+})
+
+
 
 content.addEventListener("click", function (event) {
     let result = event.target.id
@@ -160,6 +188,8 @@ function verificarvazio() {
     }
     return
 }
+
+
 
 function totalcarrinho(array) {
     let Total = 0
