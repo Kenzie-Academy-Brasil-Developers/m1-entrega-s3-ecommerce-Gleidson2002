@@ -107,18 +107,20 @@ function criadordecards(objeto) {
 function itenscarrinho(objeto) {
     let carrinho = document.createElement("div");
     carrinho.classList.add("carrinho");
-    carrinho.id = objeto.id
+    
     carrinho.innerHTML = `<div class = "carrinhocontent">
     <div class="carrinhoicone"><img id="cicone" src="${objeto.imagem}" alt=""></div>
     
     <div class = "infos">
     <p class = nome>${objeto.nome}</p>
-    <p class = preco>${objeto.valor}.00 TY </p>
-
+    <p class = preco>${objeto.valor}TY </p>
     </div>
+    <div id=excluircarrinho><img id="imgc" src="imagens/lixeira.png" alt=""></div>
     `
+    let divcarrinho = document.getElementById("divcarrinho")
 
-    direita.appendChild(carrinho)
+
+    divcarrinho.appendChild(carrinho)
 
 }
 
@@ -134,32 +136,28 @@ content.addEventListener("click", function (event) {
         }
 
     }
-
+    
+    let ptotal = document.getElementById("ptotal")
+    ptotal.innerHTML= `${totalcarrinho(arraycarrinho)}TY`
+    let quanp  = document.getElementById("quanp")
+    quanp.innerHTML = `${arraycarrinho.length}`
 
     vazioo.innerHTML = ""
-
+    infocarrinho.style.display = ""
+    verificarvazio()
     return
 })
-
-
-
-
 
 function verificarvazio() {
     let vazioo = document.getElementById("vazioo")
 
     let cvazio = document.createElement("div")
-    let infocarrinho = document.getElementById("infocarrinho")
-
     if (arraycarrinho.length === 0) {
         cvazio.innerHTML = `<div class = "vaziovazio"><p id = cv>Carrinho vazio</p><footer id= "adicione">Adicione itens</footer> </div>`
         vazioo.appendChild(cvazio)
-    } else {
-        infocarrinho.innerHTML = `<div id=carrinfodiv></div>`
-        
-
+        infocarrinho.style.display ="none"
+       
     }
-
     return
 }
 

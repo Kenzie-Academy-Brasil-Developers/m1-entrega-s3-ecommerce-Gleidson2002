@@ -1,86 +1,99 @@
-#header{
-background-color: #F5F5F5;
-width: 100%;
-height: 50px;
-min-width: 1700px;
+#header {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 50px;
+    min-width: 1760px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 }
 
 #logo {
-    
+
     height: 100%;
-    width : 150px;
-    padding:  0 20px;
+    width: 150px;
+    padding: 0 20px;
 }
+
 #category {
-   display: flex;
-   float:right;
-   margin-right: 30px;
+    display: flex;
+    float: right;
+    margin-right: 30px;
 }
-.btn{
+
+.btn {
     box-shadow: 0 0 0 0;
     border: 0 transparent;
     outline: 0;
-    background:none;
+    background: none;
     font-family: inter;
     color: #828282;
 }
+
 li {
     list-style-type: none;
-  }
-#lista{
-    display: flex;
-    flex-direction:row;
 }
 
-.btn:hover{
+#lista {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn:hover {
     border-bottom: 2px solid #6B54DE;
 }
-#butao1:hover{
+
+#butao1:hover {
     background: #6B54DE;
 }
 
-#content{
+#content {
     display: flex;
 }
-#esquerda{
-    
-    float :left;
-    min-width:80%;
+
+#esquerda {
+
+    float: left;
+    min-width: 80%;
     max-width: 80%;
-    display:flex;
-    flex-wrap: wrap;
-    margin-top:10px;
-    justify-content: space-around;
-    
-}
-#direita{
-    display : flex ;
-    flex-direction: column;
-    float : right;
-    
-}
-#pesquisa{
-    padding : 10px;
     display: flex;
-    
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-around;
+
 }
-#input{
-padding : 15px;
-background : #F5F5F5;
-border : 2px solid #6B54DE
+
+#direita {
+    display: flex;
+    flex-direction: column;
+    float: right;
+
 }
-#bpesquisa{
+
+#pesquisa {
+    padding: 10px;
+    display: flex;
+
+}
+
+#input {
+    padding: 15px;
+    background: #F5F5F5;
+    border: 2px solid #6B54DE
+}
+
+#bpesquisa {
     width: 100px;
     border: none;
     color: white;
-    background:#6B54DE;
+    background: #6B54DE;
     padding: 15px;
-    border-Left :5px solid;
+    border-Left: 5px solid;
     font-family: inter;
 
 }
-#ctext{
-    background:#6B54DE;
+
+#ctext {
+    background: #6B54DE;
     width: 347px;
     height: 40px;
     text-align: center;
@@ -92,145 +105,222 @@ border : 2px solid #6B54DE
     margin-left: 10px;
 
 }
-.produto:hover{
+
+.produto:hover {
     border: 2px solid #6B54DE;
 }
-.produto{
+
+.produto {
     align-items: center;
     width: 300px;
     height: 376px;
     border: 2px solid #F5F5F5;
     background-color: white;
-    margin-bottom:50px;
-    
-    
+    margin-bottom: 50px;
+
+
 }
-.produtoicone{
+
+.produtoicone {
     background-color: #F5F5F5;
     width: 300px;
 }
-#picone{
+
+#picone {
     display: flex;
     height: 140px;
     width: auto;
-    margin : 0 auto;
+    margin: 0 auto;
 
 }
-.classeicone{
-    background-color:#2E245E;
+
+.classeicone {
+    background-color: #2E245E;
     height: 20px;
     width: auto;
     margin-right: 200px;
     text-align: center;
-    margin-left:15px;
+    margin-left: 15px;
     font-size: 12px;
     line-height: 20px;
     font-family: inter;
-    color:white;
+    color: white;
 }
-.nome{
-    font-family:inter;
+
+.nome {
+    font-family: inter;
     font-weight: bold;
-    padding-left:10px;
+    padding-left: 10px;
 }
-.descricao{
-    font-family:inter;
-    color :gray;
-    font-size:12px;
-    padding-left:10px;
+
+.descricao {
+    font-family: inter;
+    color: gray;
+    font-size: 12px;
+    padding-left: 10px;
 }
-.preco{
-    padding-left:10px;
+
+.preco {
+    padding-left: 10px;
     font-family: inter;
     font-size: 12px;
-    color:#2E245E;
+    color: #2E245E;
 }
-#adicionarcarrinho{
-    font-family:inter;
-    font-size:12px;
-    color : #828282;
-    
-    padding-left:10px;
+
+#adicionarcarrinho {
+    font-family: inter;
+    font-size: 12px;
+    color: #828282;
+
+    padding-left: 10px;
     width: 150px;
-    margin-left:10px;
-    
+    margin-left: 10px;
+
 
 }
-.Atual{
+
+.Atual {
     font-weight: bold;
 }
 
-#cicone{
-    width: 80px;;
-    height:80px;
-    float:left;
+#cicone {
+    width: 80px;
+    ;
+    height: 80px;
+    float: left;
     margin-right: 10px;
-    background-color :white;
+    background-color: white;
     border: none;
     display: flex;
     float: left;
-    background-color:white;
+    background-color: white;
 }
-#inputp{
-    width:240px;
-    background-color:#F5F5F5;
-    border:none;
-    
-    
+
+#inputp {
+    width: 240px;
+    background-color: #F5F5F5;
+    border: none;
+
+
 }
-.carrinhocontent{
-    display:flex;
-    margin-left:10px;
+
+.carrinhocontent {
+    display: flex;
+    margin-left: 10px;
     gap: 10px;
-   
+
 }
-.carrinho{
-    background:#F5F5F5 ;
+
+.carrinho {
+    background: #F5F5F5;
     width: 347px;
     height: 120px;
-    margin-left:10px;
-    
+    margin-left: 10px;
+
 }
-.carrinhocontent{
+
+.carrinhocontent {
     margin-top: 20px;
+    justify-content: space-between;
 }
-.vaziovazio{
+
+.vaziovazio {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#F5F5F5;
+    background-color: #F5F5F5;
     width: 347px;
     height: 344px;
-    margin-left:10px;
+    margin-left: 10px;
     font-size: 22px;
     font-family: inter;
     flex-direction: column;
 }
-#adicione{
-    font-size:14px;
-    color:#828282;
+
+#adicione {
+    font-size: 14px;
+    color: #828282;
 }
-#cv{
+
+#cv {
     height: 10px
 }
-.cadd{
+
+.cadd {
     color: #828282;
     background: none;
     font-size: 14px;
-    border :none;
+    border: none;
     border-bottom: 1px solid #828282;
     margin-left: 10px;
 }
 
-#infocarrinho{
-    width: 50px;
-    height: 120px;
-    background:red;
-    margin-left: 10px;
-}
-.cadd:hover{
+
+.cadd:hover {
     color: #2E245E;
 }
 
+#carrinhoicone {
+    display: flex;
+    margin-left: 10px;
+    gap: 10px;
+}
 
+#divcarrinho {
+    display: flex;
+    flex-direction: column;
+    max-height: 330px;
+    overflow-y: scroll;
+}
 
+#infocarrinho {
+    width: 347px;
+    height: 120px;
+    background: #333333;
+    margin-left: 10px;
+    
+}
+
+#quantidade {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+#precoc{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+#ptotal{
+    margin-right: 30px;
+    color: #828282;
+}
+#quanp {
+    margin-right: 30px;
+    color: #828282;
+}
+
+#imgc{
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right:30px;
+}
