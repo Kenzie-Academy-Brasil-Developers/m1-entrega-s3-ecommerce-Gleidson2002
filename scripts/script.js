@@ -53,6 +53,43 @@ bpesquisar.addEventListener("click", function () {
     cardsparaexibir(pesquisar(pesquisa))
     inputp.value = ""
 })
+let content = document.getElementById("content")
+verificarvazio()
+
+direita.addEventListener("click", function (event) {
+    let result = event.target.id
+    let count = 1
+    for (let i = 0; i<arraycarrinho.length; i++){
+        
+      if(arraycarrinho[i].id+"c"===result&&count ===1){
+          arraycarrinho.splice(i,1) }  
+          count = 0
+    }
+    divcarrinho.innerHTML = ""
+    for (let i = 0; i<arraycarrinho.length;i++){
+        itenscarrinho(arraycarrinho[i])
+    }
+    return
+})
+
+content.addEventListener("click", function (event) {
+    let result = event.target.id
+    for (let i = 0; i < itens.length; i++) {
+        if (itens[i].id === result) {
+            arraycarrinho.push(itens[i])
+            itenscarrinho(itens[i])
+        }
+    }
+    let ptotal = document.getElementById("ptotal")
+    ptotal.innerHTML= `${totalcarrinho(arraycarrinho)}TY`
+    let quanp  = document.getElementById("quanp")
+    quanp.innerHTML = `${arraycarrinho.length}`
+
+    vazioo.innerHTML = ""
+    infocarrinho.style.display = ""
+    verificarvazio()
+    return
+})
 
 function pesquisar(texto) {
 
@@ -60,6 +97,9 @@ function pesquisar(texto) {
     for (let i = 0; i < itens.length; i++) {
 
         if ((itens[i].nome).toLowerCase().includes(texto)) {
+            result.push(itens[i])
+        }
+        if ((itens[i].descricao).toLowerCase().includes(texto)) {
             result.push(itens[i])
         }
     }
@@ -87,7 +127,6 @@ function cardsparaexibir(array) {
     }
     return
 }
-
 function criadordecards(objeto) {
     let produto = document.createElement("div")
     produto.classList.add("produto")
@@ -102,8 +141,6 @@ function criadordecards(objeto) {
 
     return produto
 }
-
-
 function itenscarrinho(objeto) {
     
     let carrinho = document.createElement("div");
@@ -126,56 +163,6 @@ function itenscarrinho(objeto) {
     
 
 }
-
-
-let content = document.getElementById("content")
-verificarvazio()
-
-direita.addEventListener("click", function (event) {
-    let result = event.target.id
-    
-    for (let i = 0; i<arraycarrinho.length; i++){
-      if(arraycarrinho[i].id+"c"===result){
-          arraycarrinho.splice(i, 1)
-      }  
-      
-
-    }
-    divcarrinho.innerHTML = ""
-    console.log(result)
-
-    for (let i = 0; i<arraycarrinho.length;i++){
-        itenscarrinho(arraycarrinho[i])
-    }
-    
-    
-    
-    return
-})
-
-
-
-content.addEventListener("click", function (event) {
-    let result = event.target.id
-    for (let i = 0; i < itens.length; i++) {
-        if (itens[i].id === result) {
-            arraycarrinho.push(itens[i])
-            itenscarrinho(itens[i])
-        }
-
-    }
-    
-    let ptotal = document.getElementById("ptotal")
-    ptotal.innerHTML= `${totalcarrinho(arraycarrinho)}TY`
-    let quanp  = document.getElementById("quanp")
-    quanp.innerHTML = `${arraycarrinho.length}`
-
-    vazioo.innerHTML = ""
-    infocarrinho.style.display = ""
-    verificarvazio()
-    return
-})
-
 function verificarvazio() {
     let vazioo = document.getElementById("vazioo")
 
@@ -188,9 +175,6 @@ function verificarvazio() {
     }
     return
 }
-
-
-
 function totalcarrinho(array) {
     let Total = 0
     for (let i = 0; i < array.length; i++) {

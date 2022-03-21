@@ -326,11 +326,12 @@ li {
     
 }
 .excluircarrinho{
+   display: flex;
    border:none; 
+
    background:none;
    margin-top: 20px;
-   margin-right:30px;
-   float:top;
+   
    z-index: 2;
    font-size: 20px;
    font-family: inter;
