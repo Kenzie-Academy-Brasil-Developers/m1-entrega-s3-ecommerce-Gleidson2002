@@ -61,9 +61,13 @@ direita.addEventListener("click", function (event) {
     let count = 1
     for (let i = 0; i<arraycarrinho.length; i++){
         
-      if(arraycarrinho[i].id+"c"===result&&count ===1){
-          arraycarrinho.splice(i,1) }  
-          count = 0
+      if(arraycarrinho[i].id+"c"===result&&count===1){
+          arraycarrinho.splice(i,1)
+        count = 0
+        } 
+          
+           
+          
     }
     divcarrinho.innerHTML = ""
     for (let i = 0; i<arraycarrinho.length;i++){
@@ -71,7 +75,7 @@ direita.addEventListener("click", function (event) {
     }
     return
 })
-
+let botaodiv = document.getElementById("botaodiv")
 content.addEventListener("click", function (event) {
     let result = event.target.id
     for (let i = 0; i < itens.length; i++) {
@@ -130,14 +134,15 @@ function cardsparaexibir(array) {
 function criadordecards(objeto) {
     let produto = document.createElement("div")
     produto.classList.add("produto")
-    produto.id = objeto.id
+    
 
-    produto.innerHTML = `<div class="produtoicone"><img id="picone" src="${objeto.imagem}" alt=""></div>
-   <p class = classeicone>${objeto.categoria}</p>
-   <p class = nome>${objeto.nome}</p>
-   <p class= descricao>${objeto.descricao}</p>
-   <p class = preco>${objeto.valor}.00 TY </p>
-   <button class = "cadd"  id="${objeto.id}"  >Adicionar ao carrinho</button>`
+    produto.innerHTML = `<div class="produtoicone" id = ><img id="picone" src="${objeto.imagem}" alt=""></div>
+   <p class = classeicone id >${objeto.categoria}</p>
+   <p class = nome >${objeto.nome}</p>
+   <p class= descricao >${objeto.descricao}</p>
+   <p class = preco >${objeto.valor}.00 TY </p>
+   <button class = "cadd"  id="${objeto.id}"  >Adicionar ao carrinho</button>
+   `
 
     return produto
 }
